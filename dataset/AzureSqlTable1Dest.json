@@ -1,0 +1,36 @@
+{
+	"name": "AzureSqlTable1Dest",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase2",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "ProductCategoryID",
+				"type": "Int32"
+			},
+			{
+				"name": "ParentProductCategoryID",
+				"type": "Int32"
+			},
+			{
+				"name": "Name",
+				"type": "String"
+			},
+			{
+				"name": "rowguid",
+				"type": "Guid"
+			},
+			{
+				"name": "ModifiedDate",
+				"type": "DateTime"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[ProductCategory]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

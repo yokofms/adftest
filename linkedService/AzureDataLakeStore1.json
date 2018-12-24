@@ -1,0 +1,13 @@
+{
+	"name": "AzureDataLakeStore1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "AzureDataLakeStore",
+		"typeProperties": {
+			"dataLakeStoreUri": "https://yokofadls.azuredatalakestore.net/webhdfs/v1",
+			"tenant": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+			"subscriptionId": "db39d52b-ad26-46aa-b73b-b77c3d875af5",
+			"resourceGroupName": "rgyokofadla"
+		}
+	}
+}
