@@ -1,0 +1,13 @@
+{
+	"name": "AzureBlobStorage1ServicePrincipal",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"serviceEndpoint": "https://yokofblob.blob.core.windows.net",
+			"tenant": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+			"servicePrincipalId": "53730f1c-2bfc-474f-980c-460147d6daa4",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIllPS09GQURGVjJfYzI0ZTU0YmUtZDQ2MS00ODA0LTg4NzktZjM3M2NmMGJhNmZkIg0KfQ=="
+		}
+	}
+}
