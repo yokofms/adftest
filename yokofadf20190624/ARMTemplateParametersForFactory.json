@@ -1,0 +1,69 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "yokofadf20190624"
+		},
+		"integrationRuntime_integrationRuntime1": {
+			"value": "integrationRuntime1"
+		},
+		"integrationRuntime_integrationRuntime20190614": {
+			"value": "integrationRuntime20190614"
+		},
+		"AzureBlobStorage1AccessKey_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage1ServicePrincipal_servicePrincipalKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_connectionString": {
+			"value": ""
+		},
+		"SqlServer1_connectionString": {
+			"value": ""
+		},
+		"SqlServer1_password": {
+			"value": ""
+		},
+		"AzureBlobStorage1ServicePrincipal_properties_typeProperties_serviceEndpoint": {
+			"value": "https://yokofblob.blob.core.windows.net"
+		},
+		"AzureBlobStorage1ServicePrincipal_properties_typeProperties_tenant": {
+			"value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"AzureBlobStorage1ServicePrincipal_properties_typeProperties_servicePrincipalId": {
+			"value": "53730f1c-2bfc-474f-980c-460147d6daa4"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_dataLakeStoreUri": {
+			"value": "https://yokofadls.azuredatalakestore.net/webhdfs/v1"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_tenant": {
+			"value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_subscriptionId": {
+			"value": "db39d52b-ad26-46aa-b73b-b77c3d875af5"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_resourceGroupName": {
+			"value": "rgyokofadla"
+		},
+		"SqlServer1_properties_typeProperties_userName": {
+			"value": "yokof@microsoft.com"
+		},
+		"integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+			"value": "yokofsqldb.database.windows.net"
+		},
+		"integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+			"value": "sqluser"
+		},
+		"integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+			"value": ""
+		},
+		"integrationRuntime20190614_properties_typeProperties_linkedInfo_resourceId": {
+			"value": "/subscriptions/db39d52b-ad26-46aa-b73b-b77c3d875af5/resourcegroups/rgyokofadfdiagnostics/providers/Microsoft.DataFactory/factories/yokofadfdiagnostics/integrationruntimes/integrationRuntime2"
+		}
+	}
+}

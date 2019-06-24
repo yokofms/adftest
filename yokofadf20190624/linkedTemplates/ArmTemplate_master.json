@@ -1,0 +1,183 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory Name",
+			"defaultValue": "yokofadf20190624"
+		},
+		"integrationRuntime_integrationRuntime1": {
+			"type": "string",
+			"metadata": "Integration Runtime Name",
+			"defaultValue": "integrationRuntime1"
+		},
+		"integrationRuntime_integrationRuntime20190614": {
+			"type": "string",
+			"metadata": "Integration Runtime Name",
+			"defaultValue": "integrationRuntime20190614"
+		},
+		"AzureBlobStorage1AccessKey_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1AccessKey'"
+		},
+		"AzureBlobStorage1ServicePrincipal_servicePrincipalKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'servicePrincipalKey' of 'AzureBlobStorage1ServicePrincipal'"
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'"
+		},
+		"AzureSqlDatabase2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase2'"
+		},
+		"SqlServer1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServer1'"
+		},
+		"SqlServer1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer1'"
+		},
+		"AzureBlobStorage1ServicePrincipal_properties_typeProperties_serviceEndpoint": {
+			"type": "string",
+			"defaultValue": "https://yokofblob.blob.core.windows.net"
+		},
+		"AzureBlobStorage1ServicePrincipal_properties_typeProperties_tenant": {
+			"type": "string",
+			"defaultValue": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"AzureBlobStorage1ServicePrincipal_properties_typeProperties_servicePrincipalId": {
+			"type": "string",
+			"defaultValue": "53730f1c-2bfc-474f-980c-460147d6daa4"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_dataLakeStoreUri": {
+			"type": "string",
+			"defaultValue": "https://yokofadls.azuredatalakestore.net/webhdfs/v1"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_tenant": {
+			"type": "string",
+			"defaultValue": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_subscriptionId": {
+			"type": "string",
+			"defaultValue": "db39d52b-ad26-46aa-b73b-b77c3d875af5"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_resourceGroupName": {
+			"type": "string",
+			"defaultValue": "rgyokofadla"
+		},
+		"SqlServer1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "yokof@microsoft.com"
+		},
+		"integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+			"type": "string",
+			"defaultValue": "yokofsqldb.database.windows.net"
+		},
+		"integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+			"type": "string",
+			"defaultValue": "sqluser"
+		},
+		"integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+			"type": "secureString"
+		},
+		"integrationRuntime20190614_properties_typeProperties_linkedInfo_resourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/db39d52b-ad26-46aa-b73b-b77c3d875af5/resourcegroups/rgyokofadfdiagnostics/providers/Microsoft.DataFactory/factories/yokofadfdiagnostics/integrationruntimes/integrationRuntime2"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas Token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"integrationRuntime_integrationRuntime1": {
+						"value": "[parameters('integrationRuntime_integrationRuntime1')]"
+					},
+					"integrationRuntime_integrationRuntime20190614": {
+						"value": "[parameters('integrationRuntime_integrationRuntime20190614')]"
+					},
+					"AzureBlobStorage1AccessKey_connectionString": {
+						"value": "[parameters('AzureBlobStorage1AccessKey_connectionString')]"
+					},
+					"AzureBlobStorage1ServicePrincipal_servicePrincipalKey": {
+						"value": "[parameters('AzureBlobStorage1ServicePrincipal_servicePrincipalKey')]"
+					},
+					"AzureSqlDatabase1_connectionString": {
+						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
+					},
+					"AzureSqlDatabase2_connectionString": {
+						"value": "[parameters('AzureSqlDatabase2_connectionString')]"
+					},
+					"SqlServer1_connectionString": {
+						"value": "[parameters('SqlServer1_connectionString')]"
+					},
+					"SqlServer1_password": {
+						"value": "[parameters('SqlServer1_password')]"
+					},
+					"AzureBlobStorage1ServicePrincipal_properties_typeProperties_serviceEndpoint": {
+						"value": "[parameters('AzureBlobStorage1ServicePrincipal_properties_typeProperties_serviceEndpoint')]"
+					},
+					"AzureBlobStorage1ServicePrincipal_properties_typeProperties_tenant": {
+						"value": "[parameters('AzureBlobStorage1ServicePrincipal_properties_typeProperties_tenant')]"
+					},
+					"AzureBlobStorage1ServicePrincipal_properties_typeProperties_servicePrincipalId": {
+						"value": "[parameters('AzureBlobStorage1ServicePrincipal_properties_typeProperties_servicePrincipalId')]"
+					},
+					"AzureDataLakeStore1_properties_typeProperties_dataLakeStoreUri": {
+						"value": "[parameters('AzureDataLakeStore1_properties_typeProperties_dataLakeStoreUri')]"
+					},
+					"AzureDataLakeStore1_properties_typeProperties_tenant": {
+						"value": "[parameters('AzureDataLakeStore1_properties_typeProperties_tenant')]"
+					},
+					"AzureDataLakeStore1_properties_typeProperties_subscriptionId": {
+						"value": "[parameters('AzureDataLakeStore1_properties_typeProperties_subscriptionId')]"
+					},
+					"AzureDataLakeStore1_properties_typeProperties_resourceGroupName": {
+						"value": "[parameters('AzureDataLakeStore1_properties_typeProperties_resourceGroupName')]"
+					},
+					"integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+						"value": "[parameters('integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint')]"
+					},
+					"integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+						"value": "[parameters('integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName')]"
+					},
+					"integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+						"value": "[parameters('integrationRuntime1_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword')]"
+					},
+					"integrationRuntime20190614_properties_typeProperties_linkedInfo_resourceId": {
+						"value": "[parameters('integrationRuntime20190614_properties_typeProperties_linkedInfo_resourceId')]"
+					},
+					"SqlServer1_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServer1_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
