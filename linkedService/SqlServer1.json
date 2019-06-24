@@ -1,0 +1,16 @@
+{
+	"name": "SqlServer1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=yokofsql2k16new;initial catalog=onpremsource",
+			"userName": "yokof@microsoft.com",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIzM2Y0ZDkxYi0xNjA1LTQ3NzYtODVlNC03NDg2OTc5ZjUwZmUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime20190614",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

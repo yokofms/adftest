@@ -14,34 +14,22 @@
 				},
 				"typeProperties": {
 					"source": {
-						"type": "SqlSource"
+						"type": "SqlServerSource"
 					},
 					"sink": {
-						"type": "SqlSink",
-						"writeBatchSize": 10000
+						"type": "SqlServerSink"
 					},
-					"enableStaging": false,
-					"dataIntegrationUnits": 0,
-					"translator": {
-						"type": "TabularTranslator",
-						"columnMappings": {
-							"ProductCategoryID": "ProductCategoryID",
-							"ParentProductCategoryID": "ParentProductCategoryID",
-							"Name": "Name",
-							"rowguid": "rowguid",
-							"ModifiedDate": "ModifiedDate"
-						}
-					}
+					"enableStaging": false
 				},
 				"inputs": [
 					{
-						"referenceName": "AzureSqlTable1Source",
+						"referenceName": "SqlServerTable1",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "AzureSqlTable1Dest",
+						"referenceName": "SqlServerTable2",
 						"type": "DatasetReference"
 					}
 				]

@@ -1,0 +1,12 @@
+{
+	"name": "integrationRuntime20190614",
+	"properties": {
+		"type": "SelfHosted",
+		"typeProperties": {
+			"linkedInfo": {
+				"resourceId": "/subscriptions/db39d52b-ad26-46aa-b73b-b77c3d875af5/resourcegroups/rgyokofadfdiagnostics/providers/Microsoft.DataFactory/factories/yokofadfdiagnostics/integrationruntimes/integrationRuntime2",
+				"authorizationType": "Rbac"
+			}
+		}
+	}
+}
